@@ -1,14 +1,7 @@
 <template>
   <div>
-    <tiny-tag
-      v-for="tag in tags"
-      :key="'tiny-tag1-' + tag.name"
-      closable
-      :type="tag.type"
-      @close="handleClose(tag)"
-      :before-delete="beforeDelete"
-      >{{ tag.name }}</tiny-tag
-    >
+    <tiny-tag v-for="tag in tags" :key="'tiny-tag1-' + tag.name" closable :type="tag.type" @close="handleClose(tag)"
+      :before-delete="beforeDelete">{{ tag.name }}</tiny-tag>
   </div>
 </template>
 
@@ -26,7 +19,6 @@ export default {
         { name: '标签二', type: 'success' },
         { name: '标签三', type: 'info' },
         { name: '标签四', type: 'warning' },
-        
         { name: '标签五', type: 'danger' }
       ]
     }
@@ -46,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-.tiny-tag + .tiny-tag {
+.tiny-tag+.tiny-tag {
   margin-left: 10px;
 }
 </style>
